@@ -1,3 +1,3 @@
-# PrjJava1
+# java Project
 Integrantes:
 - Daniel Mera
