@@ -1,16 +1,17 @@
-public class WhileDanielD extends Base{
+public class WhileMeraM extends Base{
+
+    public WhileMeraM() {
+        super();
+    }
 
     @Override
     public void imprimirLetra(int size, char character) {
-        if(size > 2) {
+        if (size > 2) {
             int row = 0;
             while (row < size) {
-                System.out.print(character);
                 int col = 0;
                 while (col < size) {
-                    if ((row == 0 || row == size - 1) && col < size - 1) {
-                        System.out.print(character);
-                    } else if (col == size - 1 && (row > 0 && row < size - 1)) {
+                    if (col == 0 || col == size - 1 || (row == col && col <= size / 2) || (row + col == size - 1 && col >= size / 2)) {
                         System.out.print(character);
                     } else {
                         System.out.print(" ");
@@ -20,6 +21,8 @@ public class WhileDanielD extends Base{
                 System.out.println();
                 row++;
             }
-        } else System.out.print(super.msg);
+
+            System.out.println();
+        } else System.out.println(super.msg);
     }
 }
